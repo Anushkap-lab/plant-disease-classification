@@ -28,8 +28,17 @@ len(val_ds)
 
 test_ds=dataset.skip(train_size+val_size)
 len(test_ds)
+data_augmentation = tf.keras.Sequential([
+    tf.keras.layers.RandomFlip("horizontal_and_vertical"),
+    tf.keras.layers.RandomRotation(0.2),
+    tf.keras.layers.RandomZoom(0.2),
+    tf.keras.layers.RandomBrightness(0.2),
+    tf.keras.layers.RandomContrast(0.2),
+])
 
 model=Sequential([
+    data_augmentation,  
+    tf.keras.layers.Rescaling(1./255),    # ← normalize here instead of manually
     Conv2D(32,(3,3),activation="relu",input_shape=(256,256,3)),
     MaxPooling2D((2,2)),
 
