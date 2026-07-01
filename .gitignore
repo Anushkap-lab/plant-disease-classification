@@ -4,5 +4,3 @@ __pycache__/
 .env
 PlantVillage/
 modelsaved.h5
-.DS_Store
-.vscode/
