@@ -29,4 +29,4 @@ if uploaded:
 
     st.subheader(f"Result: {label}")
     st.write(f"Confidence: {confidence}%")
-    print(" ")
+    
