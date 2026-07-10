@@ -68,7 +68,7 @@ history=model.fit(train_ds,epochs=20,verbose=1,batch_size=BATCH_SIZE,
 loss, accuracy = model.evaluate(test_ds)
 print(f"\nTest accuracy: {round(accuracy * 100, 2)}%")
 
-model.save("modelsaved.h5")
+model.save("modelsaved.keras")
 
 
  

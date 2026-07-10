@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
-MODEL_PATH  = "modelsaved.h5"
+MODEL_PATH  = "modelsaved.keras"
 
 @st.cache_resource
 def load_model():
