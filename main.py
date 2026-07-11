@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 
-CLASS_NAMES = ["Ptato__Early_Blight", "Potato__healthy", "Potato__Late_blight"]
+CLASS_NAMES = ["Potato__Early_Blight", "Potato__healthy", "Potato__Late_blight"]
 MODEL_PATH  = "modelsaved.keras"
 
 @st.cache_resource
