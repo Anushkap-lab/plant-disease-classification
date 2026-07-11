@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 
-CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
+CLASS_NAMES = ["Ptato__Early_Blight", "Potato__healthy", "Potato__Late_blight"]
 MODEL_PATH  = "modelsaved.keras"
 
 @st.cache_resource
@@ -20,7 +20,7 @@ if uploaded:
 
     model = load_model()
 
-    img = np.array(image.resize((256, 256))) / 255.0
+    img = np.array(image.resize((256, 256)))
     img = np.expand_dims(img, axis=0)
 
     predictions = model.predict(img)
